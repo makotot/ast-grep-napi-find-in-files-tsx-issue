@@ -24,6 +24,7 @@ import { tsx } from '@ast-grep/napi'
       const results = resultNodes.map((node) => {
         return {
           statement: node.text(),
+          kind: node.kind(),
           path: node.getRoot().filename(),
         }
       })
